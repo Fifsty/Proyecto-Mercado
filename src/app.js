@@ -6,9 +6,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log(`se prendio en el puerto ${PORT}`);
+const port = 3001;
+app.listen(port, () => {
+    console.log("El servidor se ha iniciado correctamente: " + 
+    port);
 });
 
 app.get('/', (req, res) => {
